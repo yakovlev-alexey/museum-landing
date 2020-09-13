@@ -1,10 +1,16 @@
 $bckgrnd-clr: #FCF7E6;
+$navmenu-bckgrnd-clr: #9D7818;
+$footer-bckgrnd-clr: #333333;
+
 $max-content-width: 1440px;
 $block-item-margin: 82px;
 $portrait-padding: 22px;
 $contents-padding: 313px;
 $contents-cols-margin: 14px;
 $article-margin: 58px;
+$navmenu-margin: 62px;
+$navitem-margin: 10px;
+$sponsor-margin: 40px;
 
 @font-face {
   font-family: "SchoolBook";
@@ -30,6 +36,7 @@ body {
   background-position: center, top;
   background-size: auto, cover;
   background-repeat: no-repeat, repeat-y;
+  background-attachment: scroll, fixed;
 }
 
 .content {
@@ -86,6 +93,7 @@ body {
 }
 
 .portrait-wrapper {
+  display: inline-block;
   padding: $portrait-padding;
   background-image: url("../img/portrait-border.svg");
   background-repeat: no-repeat;
@@ -151,20 +159,23 @@ body {
 
 .article {
 
-  padding: 0 128px;
+  padding: 100px 128px 0 128px;
 
   display: flex;
   flex-direction: column;
 
-  .article-item, .article-two-items {
+  .article-item,
+  .article-two-items {
     margin: $article-margin/2 0;
   }
 
-  .article-item:first-child, .article-two-items:first-child {
+  .article-item:first-child,
+  .article-two-items:first-child {
     margin: 0 auto $article-margin/2 auto;
   }
 
-  .article-item:last-child, .article-two-items:last-child {
+  .article-item:last-child,
+  .article-two-items:last-child {
     margin: $article-margin/2 auto 0 auto;
   }
 }
@@ -203,10 +214,13 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  .flex-1:first-child, flex-2:first-child {
-    margin-right: 50px; 
+  .flex-1:first-child,
+  flex-2:first-child {
+    margin-right: 50px;
   }
-  .flex-1:last-child, flex-2:last-child{
+
+  .flex-1:last-child,
+  flex-2:last-child {
     margin-left: 50px;
   }
 }
@@ -214,6 +228,7 @@ body {
 .flex-2 {
   flex: 2;
 }
+
 .flex-1 {
   flex: 1;
 }
@@ -230,4 +245,139 @@ body {
 .article-image {
   width: 100%;
   height: auto;
+}
+
+.navmenu-wrapper {
+  width: 100%;
+  max-width: $max-content-width;
+}
+
+.navmenu {
+  margin: 0 auto;
+  min-height: 400px;
+
+  color: white;
+  background-color: $navmenu-bckgrnd-clr;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .navmenu-item {
+    margin: $navmenu-margin/2 0;
+  }
+
+  .navmenu-item:first-child {
+    margin-top: 0;
+  }
+
+  .navmenu-item:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+.navitems {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  .navitem-separator {
+    width: 50px;
+    height: 5px;
+    background-image: url("../img/navitem-separator.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .navitem {
+    margin: 0 $navitem-margin/2;
+    color: white;
+  }
+
+  .navitem:first-child {
+    margin-left: 0;
+  }
+
+  .navitem:last-child {
+    display: inline-block;
+    margin-right: 0;
+  }
+}
+
+.footer-wrapper {
+  background-color: $footer-bckgrnd-clr;
+}
+
+footer {
+  padding: 100px 150px;
+  margin: 0 auto;
+  min-height: 400px;
+  max-width: $max-content-width;
+
+  color: white;
+}
+
+.footer-row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.sponsor {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.primary-sponsor {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.sponsor-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+}
+
+.sponsor-link {
+  margin: $sponsor-margin/2;
+}
+
+.sponsor-link:first-child {
+  margin-left: 0;
+}
+
+.sponsor-link:last-child {
+  margin-right: 0;
+}
+
+#psb {
+  margin: -50px 0;
 }

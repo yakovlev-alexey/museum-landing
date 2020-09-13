@@ -11,13 +11,18 @@ $(window).on("load", function () {
       var top_of_object = $(this).position().top;
       var bottom_of_object = $(this).position().top + $(this).outerHeight();
 
-      if (visible_threshold > top_of_object) {
-        $(this).addClass("block-visible");
-      } else if (invisible_threshold < bottom_of_object) {
+      if ((invisible_threshold > bottom_of_object) || (visible_threshold < top_of_object)) {
         $(this).removeClass("block-visible");
+      } else if (visible_threshold > top_of_object) {
+        $(this).addClass("block-visible");
       }
 
     });
+  });
+
+  $(".contents-item").on("click", function() {
+    window.location.hash = "";
+    window.location.hash = $(this).attr("data-ref");
   });
 
 });
