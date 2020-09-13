@@ -35,6 +35,6 @@ $(window).on("load", function () {
     $([document.documentElement, document.body]).animate({
       scrollTop: $(ref).offset().top
   }, 500);
-  })
+  });
 
 });
