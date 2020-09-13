@@ -117,9 +117,14 @@ body {
   text-decoration: underline; }
 
 .article {
-  padding: 100px 125px 0 125px;
   display: flex;
   flex-direction: column; }
+  @media screen and (min-width: 769px) {
+    .article {
+      padding: 100px 125px 0 125px; } }
+  @media screen and (max-width: 768px) {
+    .article {
+      padding: 100px 50px 0 50px; } }
   .article .article-item,
   .article .article-two-items {
     margin: 25px 0; }

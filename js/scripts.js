@@ -22,18 +22,24 @@ $(window).on("load", function () {
 
   $(".contents-item").on("click", function() {
     var ref = $(this).attr("data-ref");
+    var el = $("#" + ref);
+    el.attr("id", null);
     window.location.hash = ref;
+    el.attr("id", ref);
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#" + ref).offset().top
+      scrollTop: el.offset().top
   }, 500);
   });
 
   $("a.navitem").on("click", function(event) {
     event.preventDefault();
     var ref = $(this).attr("href");
+    var el = $(ref);
+    el.attr("id", null);
     window.location.hash = ref;
+    el.attr("id", ref);
     $([document.documentElement, document.body]).animate({
-      scrollTop: $(ref).offset().top
+      scrollTop: el.offset().top
   }, 500);
   });
 
