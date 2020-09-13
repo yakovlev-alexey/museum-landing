@@ -4,8 +4,8 @@ $(window).on("load", function () {
     var top_of_window = $(window).scrollTop();
     var bottom_of_window = top_of_window + $(window).height();
 
-    var visible_threshold = bottom_of_window - $(window).height() * 0.65;
-    var invisible_threshold = top_of_window + $(window).height() * 0.65;
+    var visible_threshold = bottom_of_window - $(window).height() * 0.4;
+    var invisible_threshold = top_of_window + $(window).height() * 0.4;
 
     $('.block-wrapper').each(function () {
       var top_of_object = $(this).position().top;

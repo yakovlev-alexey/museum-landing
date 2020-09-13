@@ -46,6 +46,8 @@ body {
 }
 
 .block-wrapper {
+  margin-top: 100px;
+  padding: 0 50px;
   height: 100vh;
 
   display: flex;
@@ -70,6 +72,10 @@ body {
   }
 }
 
+.block-wrapper:first-child {
+  margin-top: 0;
+}
+
 .block-visible {
   opacity: 1;
 }
@@ -85,11 +91,12 @@ body {
 
   img {
     visibility: hidden;
+    max-width: 100%;
   }
 }
 
 .preview-block {
-  min-height: 1300px;
+  min-height: 800px;
 }
 
 .portrait-wrapper {
@@ -118,6 +125,7 @@ body {
 
 .contents-block {
   min-height: 600px;
+  max-height: 800px;
 }
 
 .contents-table {
@@ -280,7 +288,7 @@ body {
 
 .navitems {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
