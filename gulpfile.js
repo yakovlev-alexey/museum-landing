@@ -42,8 +42,13 @@ gulp.task('clean', function () {
 })
 
 gulp.task('copyfonts', function () {
-  return gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+  return gulp.src('./fonts/**/*.{ttf,woff,eof,svg}')
     .pipe(gulp.dest('./dist/fonts'))
+})
+
+gulp.task('copyimg', function () {
+  return gulp.src('./img/**/*.{svg,png,jpg,jpeg}')
+    .pipe(gulp.dest('./dist/img'))
 })
 
 gulp.task('usemin', function () {
@@ -52,7 +57,11 @@ gulp.task('usemin', function () {
       return stream
         .pipe(usemin({
           css: [rev()],
-          html: [function () { return htmlmin({ collapseWhitespace: true }) }],
+          html: [function () {
+            return htmlmin({
+              collapseWhitespace: true
+            })
+          }],
           js: [uglify(), rev()],
           inlinejs: [uglify()],
           inlinecss: [cleanCss(), 'concat']
@@ -61,4 +70,4 @@ gulp.task('usemin', function () {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('build', gulp.series('clean', gulp.parallel('copyfonts', 'usemin')))
+gulp.task('build', gulp.series('clean', gulp.parallel('copyimg', 'copyfonts', 'usemin')))
