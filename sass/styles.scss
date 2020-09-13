@@ -4,9 +4,15 @@ $block-item-margin: 82px;
 $portrait-padding: 26px;
 $contents-padding: 313px;
 $contents-cols-margin: 14px;
+$article-margin: 58px;
+
+@font-face {
+  font-family: "SchoolBook";
+  src: url("fonts/Schoolbook Regular.ttf");
+}
 
 * {
-  font-family: schoolbook, serif;
+  font-family: "SchoolBook", serif;
   margin: 0;
   padding: 0;
 }
@@ -62,6 +68,16 @@ body {
 
 .title-block {
   min-height: 500px;
+}
+
+.vector-title {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  img {
+    visibility: hidden;
+  }
 }
 
 .preview-block {
@@ -127,4 +143,52 @@ body {
 .contents-item:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.article {
+
+  padding: 0 128px;
+
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify;
+  }
+
+  * {
+    margin: $article-margin/2 0;
+  }
+
+  :first-child {
+    margin: 0 auto $article-margin/2 auto;
+  }
+
+  :last-child {
+    margin: $article-margin/2 auto 0 auto;
+  }
+}
+
+%vector-first-letter {
+  font-size: 180px;
+  line-height: 100px;
+  color: rgba(0, 0, 0, 0);
+
+  padding: 0;
+  margin: 10px 0 -10px -10px;
+  float: left;
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+#letter-1:first-letter {
+  @extend %vector-first-letter;
+  background-image: url("../img/vector-letter-1.svg");
+
 }

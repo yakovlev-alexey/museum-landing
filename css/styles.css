@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "SchoolBook";
+  src: url("fonts/Schoolbook Regular.ttf"); }
+
 * {
-  font-family: schoolbook, serif;
+  font-family: "SchoolBook", serif;
   margin: 0;
   padding: 0; }
 
@@ -40,6 +44,13 @@ body {
 
 .title-block {
   min-height: 500px; }
+
+.vector-title {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+  .vector-title img {
+    visibility: hidden; }
 
 .preview-block {
   min-height: 1300px; }
@@ -88,3 +99,34 @@ body {
 .contents-item:hover {
   cursor: pointer;
   text-decoration: underline; }
+
+.article {
+  padding: 0 128px;
+  display: flex;
+  flex-direction: column; }
+  .article p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify; }
+  .article * {
+    margin: 29px 0; }
+  .article :first-child {
+    margin: 0 auto 29px auto; }
+  .article :last-child {
+    margin: 29px auto 0 auto; }
+
+#letter-1:first-letter {
+  font-size: 180px;
+  line-height: 100px;
+  color: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin: 10px 0 -10px -10px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain; }
+
+#letter-1:first-letter {
+  background-image: url("../img/vector-letter-1.svg"); }
