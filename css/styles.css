@@ -81,6 +81,9 @@ body {
   text-align: justify;
   letter-spacing: 0.06em;
   color: #333333; }
+  @media screen and (max-width: 1280px) {
+    .preview-text {
+      padding: 0 125px; } }
 
 .contents-block {
   min-height: 600px;
@@ -119,13 +122,13 @@ body {
   flex-direction: column; }
   .article .article-item,
   .article .article-two-items {
-    margin: 29px 0; }
+    margin: 25px 0; }
   .article .article-item:first-child,
   .article .article-two-items:first-child {
-    margin: 0 auto 29px auto; }
+    margin: 0 auto 25px auto; }
   .article .article-item:last-child,
   .article .article-two-items:last-child {
-    margin: 29px auto 0 auto; }
+    margin: 25px auto 0 auto; }
 
 .primary-text {
   font-style: normal;
@@ -135,9 +138,7 @@ body {
   text-align: justify;
   letter-spacing: 0.06em; }
 
-#letter-1:first-letter {
-  font-size: 275px;
-  line-height: 200px;
+#letter-1:first-letter, #letter-2:first-letter, #letter-3:first-letter, #letter-4:first-letter, #letter-5:first-letter, #letter-6:first-letter, #letter-7:first-letter {
   color: rgba(0, 0, 0, 0);
   padding: 0;
   margin: 10px 20px -10px -10px;
@@ -147,7 +148,40 @@ body {
   background-size: contain; }
 
 #letter-1:first-letter {
-  background-image: url("../img/vector-letter-1.svg"); }
+  font-size: 275px;
+  line-height: 200px;
+  background-image: url("../img/article-1/vector-letter-1.svg"); }
+
+#letter-2:first-letter {
+  font-size: 265px;
+  line-height: 250px;
+  background-image: url("../img/article-2/vector-letter-2.svg"); }
+
+#letter-3:first-letter {
+  font-size: 120px;
+  line-height: 125px;
+  background-image: url("../img/article-3/vector-letter-3.svg"); }
+
+#letter-4:first-letter {
+  font-size: 320px;
+  line-height: 300px;
+  background-image: url("../img/article-4/vector-letter-4.svg"); }
+
+#letter-5:first-letter {
+  font-size: 320px;
+  line-height: 300px;
+  background-image: url("../img/article-5/vector-letter-5.svg"); }
+
+#letter-6:first-letter {
+  font-size: 320px;
+  line-height: 300px;
+  margin-left: -40px;
+  background-image: url("../img/article-6/vector-letter-6.svg"); }
+
+#letter-7:first-letter {
+  font-size: 250px;
+  line-height: 230px;
+  background-image: url("../img/article-7/vector-letter-7.svg"); }
 
 .article-two-items {
   display: flex;
@@ -178,6 +212,22 @@ body {
 .article-image {
   width: 100%;
   height: auto; }
+
+.quote {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: justify;
+  letter-spacing: 0.06em; }
+
+.quote-author {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: right;
+  letter-spacing: 0.06em; }
 
 .navmenu-wrapper {
   width: 100%;

@@ -7,7 +7,7 @@ $block-item-margin: 82px;
 $portrait-padding: 22px;
 $contents-padding: 313px;
 $contents-cols-margin: 14px;
-$article-margin: 58px;
+$article-margin: 50px;
 $navmenu-margin: 62px;
 $navitem-margin: 10px;
 $sponsor-margin: 40px;
@@ -112,6 +112,10 @@ body {
   margin: 0;
   padding: 0 275px;
 
+  @media screen and (max-width: 1280px) {
+    padding: 0 125px;
+  }
+
   font-style: italic;
   font-weight: normal;
   font-size: 24px;
@@ -198,8 +202,6 @@ body {
 }
 
 %vector-first-letter {
-  font-size: 275px;
-  line-height: 200px;
   color: rgba(0, 0, 0, 0);
 
   padding: 0;
@@ -213,7 +215,67 @@ body {
 
 #letter-1:first-letter {
   @extend %vector-first-letter;
-  background-image: url("../img/vector-letter-1.svg");
+
+  font-size: 275px;
+  line-height: 200px;
+
+  background-image: url("../img/article-1/vector-letter-1.svg");
+}
+
+#letter-2:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 265px;
+  line-height: 250px;
+
+  background-image: url("../img/article-2/vector-letter-2.svg");
+}
+
+#letter-3:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 120px;
+  line-height: 125px;
+
+  background-image: url("../img/article-3/vector-letter-3.svg");
+}
+
+#letter-4:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 320px;
+  line-height: 300px;
+
+  background-image: url("../img/article-4/vector-letter-4.svg");
+}
+
+#letter-5:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 320px;
+  line-height: 300px;
+
+  background-image: url("../img/article-5/vector-letter-5.svg");
+}
+
+#letter-6:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 320px;
+  line-height: 300px;
+
+  margin-left: -40px; 
+
+  background-image: url("../img/article-6/vector-letter-6.svg");
+}
+
+#letter-7:first-letter {
+  @extend %vector-first-letter;
+
+  font-size: 250px;
+  line-height: 230px;
+
+  background-image: url("../img/article-7/vector-letter-7.svg");
 }
 
 .article-two-items {
@@ -253,6 +315,26 @@ body {
 .article-image {
   width: 100%;
   height: auto;
+}
+
+.quote {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+
+  text-align: justify;
+  letter-spacing: 0.06em;
+}
+
+.quote-author {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+
+  text-align: right;
+  letter-spacing: 0.06em;
 }
 
 .navmenu-wrapper {
