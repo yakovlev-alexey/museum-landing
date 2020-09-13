@@ -21,8 +21,20 @@ $(window).on("load", function () {
   });
 
   $(".contents-item").on("click", function() {
-    window.location.hash = "";
-    window.location.hash = $(this).attr("data-ref");
+    var ref = $(this).attr("data-ref");
+    window.location.hash = ref;
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#" + ref).offset().top
+  }, 500);
   });
+
+  $("a.navitem").on("click", function(event) {
+    event.preventDefault();
+    var ref = $(this).attr("href");
+    window.location.hash = ref;
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(ref).offset().top
+  }, 500);
+  })
 
 });
