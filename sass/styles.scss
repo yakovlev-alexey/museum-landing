@@ -11,6 +11,7 @@ $contents-cols-margin: 14px;
 $article-margin: 50px;
 $article-margin-sm: 25px;
 $navmenu-margin: 62px;
+$navmenu-margin-sm: 31px;
 $navitem-margin: 10px;
 $sponsor-margin: 68px;
 $article-padding-sm: 25px;
@@ -617,6 +618,9 @@ p:first-child {
 
   .navmenu-item {
     margin: $navmenu-margin/2 0;
+    @media screen and (max-width: 480px) {
+      margin: $navmenu-margin-sm/2 0;
+    }
   }
 
   .navmenu-item:first-child {
@@ -646,6 +650,11 @@ p:first-child {
   text-align: center;
   letter-spacing: 0.06em;
 
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
   .navitem-separator {
     width: 50px;
     height: 5px;
@@ -653,12 +662,16 @@ p:first-child {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (max-width: 480px) {
+      width: 35px;
+    }
   }
 
   .navitem {
     margin: 0 $navitem-margin/2;
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 850px) {
       margin: $navitem-margin/2 0;
     }
 
