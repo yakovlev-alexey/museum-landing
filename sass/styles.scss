@@ -307,6 +307,8 @@ body {
 
 .article {
 
+  object-fit: contain;
+
   @media screen and (min-width: 769px) {
     padding: 100px $article-padding-lg 0 $article-padding-lg;
   }
@@ -604,7 +606,12 @@ p:first-child {
   }
 }
 
+.image-container {
+  width: 100%;
+}
+
 .article-image {
+  display: block;
   width: 100%;
   height: auto;
 }
