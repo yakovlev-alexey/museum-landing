@@ -567,7 +567,7 @@ footer {
   padding-left: 25px;
 
   @media screen and (max-width: 1280px) {
-    flex-flow: column nowrap;
+    flex-flow: column nowrap; 
     align-items: center;
     justify-content: center;
   }
@@ -641,5 +641,5 @@ footer {
 }
 
 #psb {
-  margin: -50px 0;
+  margin: -15px 0 -10px 0;
 }
