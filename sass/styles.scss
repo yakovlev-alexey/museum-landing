@@ -48,6 +48,7 @@ body {
 
   @media screen and (max-width: 480px) {
     background-image: url("../img/monogram-sm.png"), url("../img/leather_bg-sm.png");
+    background-size: auto, contain;
   }
 }
 
