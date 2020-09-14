@@ -4,6 +4,7 @@ $footer-bckgrnd-clr: #333333;
 
 $max-content-width: 1440px;
 $block-item-margin: 82px;
+$block-item-margin-sm: 44px;
 $portrait-padding: 22px;
 $portrait-padding-sm: 14px;
 $contents-padding: 313px;
@@ -72,6 +73,10 @@ body {
   * {
     margin-top: $block-item-margin/2;
     margin-bottom: $block-item-margin/2;
+    @media screen and (max-width: 480px) {
+      margin-top: $block-item-margin-sm/2;
+      margin-bottom: $block-item-margin-sm/2;
+    }
   }
 
   :first-child {
@@ -96,8 +101,8 @@ body {
 
   @media screen and (max-width: 480px) {
     * {
-      margin-top: 29px;
-      margin-bottom: 29px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -165,6 +170,11 @@ body {
 
   @media screen and (max-width: 480px) {
     min-height: 500px;
+
+    * {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 }
 
