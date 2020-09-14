@@ -211,7 +211,7 @@ body {
   color: rgba(0, 0, 0, 0);
 
   padding: 0;
-  margin: 10px 20px -10px -10px;
+  margin: 10px 20px -10px 0;
   float: left;
 
   background-repeat: no-repeat;
@@ -231,8 +231,8 @@ body {
 #letter-2:first-letter {
   @extend %vector-first-letter;
 
-  font-size: 265px;
-  line-height: 250px;
+  font-size: 275px;
+  line-height: 215px;
 
   background-image: url("../img/article-2/vector-letter-2.svg");
 }
@@ -249,8 +249,8 @@ body {
 #letter-4:first-letter {
   @extend %vector-first-letter;
 
-  font-size: 320px;
-  line-height: 300px;
+  font-size: 330px;
+  line-height: 270px;
 
   background-image: url("../img/article-4/vector-letter-4.svg");
 }
@@ -268,7 +268,7 @@ body {
   @extend %vector-first-letter;
 
   font-size: 320px;
-  line-height: 300px;
+  line-height: 250px;
 
   margin-left: -40px; 
 
@@ -462,7 +462,7 @@ footer {
   height: 150px;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: start;
 }

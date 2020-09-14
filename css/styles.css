@@ -146,7 +146,7 @@ body {
 #letter-1:first-letter, #letter-2:first-letter, #letter-3:first-letter, #letter-4:first-letter, #letter-5:first-letter, #letter-6:first-letter, #letter-7:first-letter {
   color: rgba(0, 0, 0, 0);
   padding: 0;
-  margin: 10px 20px -10px -10px;
+  margin: 10px 20px -10px 0;
   float: left;
   background-repeat: no-repeat;
   background-position: top;
@@ -158,8 +158,8 @@ body {
   background-image: url("../img/article-1/vector-letter-1.svg"); }
 
 #letter-2:first-letter {
-  font-size: 265px;
-  line-height: 250px;
+  font-size: 275px;
+  line-height: 215px;
   background-image: url("../img/article-2/vector-letter-2.svg"); }
 
 #letter-3:first-letter {
@@ -168,8 +168,8 @@ body {
   background-image: url("../img/article-3/vector-letter-3.svg"); }
 
 #letter-4:first-letter {
-  font-size: 320px;
-  line-height: 300px;
+  font-size: 330px;
+  line-height: 270px;
   background-image: url("../img/article-4/vector-letter-4.svg"); }
 
 #letter-5:first-letter {
@@ -179,7 +179,7 @@ body {
 
 #letter-6:first-letter {
   font-size: 320px;
-  line-height: 300px;
+  line-height: 250px;
   margin-left: -40px;
   background-image: url("../img/article-6/vector-letter-6.svg"); }
 
@@ -323,7 +323,7 @@ footer {
 .sponsor-row {
   height: 150px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: start; }
 
