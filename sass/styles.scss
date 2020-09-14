@@ -97,6 +97,14 @@ body {
 
 .preview-block {
   min-height: 800px;
+
+  @media screen and (max-width: 768px) {
+    min-height: 1500px;
+  }
+
+  @media screen and (max-width: 480px) {
+    min-height: 2500px;
+  }
 }
 
 .portrait-wrapper {
@@ -118,6 +126,14 @@ body {
     padding: 0 125px;
   }
 
+  @media screen and (max-width: 768px) {
+    padding: 0 50px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 25px;
+  }
+
   font-style: italic;
   font-weight: normal;
   font-size: 24px;
@@ -132,6 +148,12 @@ body {
 .contents-block {
   min-height: 600px;
   max-height: 800px;
+
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 480px) {
+    min-height: 900px;
+  }
 }
 
 .contents-table {
@@ -141,6 +163,8 @@ body {
   font-weight: normal;
   font-size: 26px;
   line-height: 45px;
+
+  border-spacing: 10px;
 
   letter-spacing: 0.06em;
 }
@@ -163,6 +187,10 @@ body {
     background-size: contain;
     background-position: 0 70%;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
 }
 
@@ -179,6 +207,10 @@ body {
 
   @media screen and (max-width: 768px) {
     padding: 100px 50px 0 50px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 100px 25px 0 25px;
   }
 
   display: flex;
@@ -235,6 +267,11 @@ p:first-child {
   font-size: 275px;
   line-height: 200px;
 
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+  }
+
   background-image: url("../img/article-1/vector-letter-1.svg");
 }
 
@@ -243,6 +280,11 @@ p:first-child {
 
   font-size: 275px;
   line-height: 215px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+  }
 
   background-image: url("../img/article-2/vector-letter-2.svg");
 }
@@ -262,6 +304,11 @@ p:first-child {
   font-size: 330px;
   line-height: 270px;
 
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+  }
+
   background-image: url("../img/article-4/vector-letter-4.svg");
 }
 
@@ -271,6 +318,11 @@ p:first-child {
   font-size: 320px;
   line-height: 300px;
 
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+  }
+
   background-image: url("../img/article-5/vector-letter-5.svg");
 }
 
@@ -279,8 +331,13 @@ p:first-child {
 
   font-size: 320px;
   line-height: 250px;
-
   margin-left: -40px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+    margin-left: -20px;
+  }
 
   background-image: url("../img/article-6/vector-letter-6.svg");
 }
@@ -290,6 +347,12 @@ p:first-child {
 
   font-size: 250px;
   line-height: 230px;
+
+
+  @media screen and (max-width: 480px) {
+    font-size: 160px;
+    line-height: 120px;
+  }
 
   background-image: url("../img/article-7/vector-letter-7.svg");
 }
