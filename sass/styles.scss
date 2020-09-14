@@ -10,7 +10,7 @@ $contents-cols-margin: 14px;
 $article-margin: 50px;
 $navmenu-margin: 62px;
 $navitem-margin: 10px;
-$sponsor-margin: 40px;
+$sponsor-margin: 68px;
 $article-padding-sm: 25px;
 $article-padding-md: 50px;
 $article-padding-lg: 125px;
@@ -514,9 +514,11 @@ p:first-child {
 
   .navitem {
     margin: 0 $navitem-margin/2;
+
     @media screen and (max-width: 860px) {
       margin: $navitem-margin/2 0;
     }
+
     color: white;
     text-decoration: none;
   }
@@ -561,11 +563,19 @@ footer {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  justify-content: space-between;
+
+  padding-left: 25px;
 
   @media screen and (max-width: 1280px) {
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .sponsor:last-child {
+      margin-left: 176px;
+    }
   }
 }
 
@@ -616,6 +626,7 @@ footer {
   @media screen and (max-width: 480px) {
     margin-top: 25px;
   }
+
   @media screen and (min-width: 480px) {
     margin: 0 $sponsor-margin/2;
   }
