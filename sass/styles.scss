@@ -747,8 +747,13 @@ p:first-child {
   }
 }
 
-.footer-wrapper {
+.footer-container {
   background-color: $footer-bckgrnd-clr;
+}
+
+.footer-wrapper {
+  max-width: $max-content-width;
+  margin: 0 auto;
 }
 
 footer {
