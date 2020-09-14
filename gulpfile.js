@@ -70,4 +70,4 @@ gulp.task('usemin', function () {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('build', gulp.series('clean', gulp.parallel('copyimg', 'copyfonts', 'usemin')))
+gulp.task('build', gulp.series('clean', 'sass', gulp.parallel('copyimg', 'copyfonts', 'usemin')))
