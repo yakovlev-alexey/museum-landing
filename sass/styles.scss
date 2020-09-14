@@ -564,8 +564,6 @@ footer {
   flex-flow: row wrap;
   align-items: flex-start;
 
-  padding-left: 25px;
-
   @media screen and (max-width: 1280px) {
     flex-flow: column nowrap; 
     align-items: center;
@@ -573,6 +571,7 @@ footer {
   }
 
   @media screen and (min-width: 1280px) {
+    padding-left: 25px;
     .sponsor:last-child {
       margin-left: 176px;
     }
