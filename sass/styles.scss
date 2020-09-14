@@ -462,7 +462,7 @@ p:first-child {
 
 .navmenu {
   margin: 0 auto;
-  min-height: 400px;
+  padding: 50px 50px;
 
   color: white;
   background-color: $navmenu-bckgrnd-clr;
@@ -492,6 +492,10 @@ p:first-child {
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 850px) {
+    flex-flow: column nowrap;
+  }
+
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -510,7 +514,15 @@ p:first-child {
 
   .navitem {
     margin: 0 $navitem-margin/2;
+    @media screen and (max-width: 860px) {
+      margin: $navitem-margin/2 0;
+    }
     color: white;
+    text-decoration: none;
+  }
+
+  a.navitem:hover {
+    text-decoration: underline;
   }
 
   .navitem:first-child {
