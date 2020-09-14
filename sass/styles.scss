@@ -93,6 +93,13 @@ body {
 
 .title-block {
   min-height: 500px;
+
+  @media screen and (max-width: 480px) {
+    * {
+      margin-top: 29px;
+      margin-bottom: 29px;
+    }
+  }
 }
 
 .vector-title {
@@ -108,6 +115,15 @@ body {
   @media screen and (max-width: 480px) {
     max-height: 20px;
   }
+}
+
+#alexander-3 {
+  max-height: none;
+}
+
+#tsar-peacemaker {
+  max-height: none;
+  max-width: 80%;
 }
 
 #contents-title {
