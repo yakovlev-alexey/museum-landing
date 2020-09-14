@@ -11,6 +11,10 @@ $article-margin: 50px;
 $navmenu-margin: 62px;
 $navitem-margin: 10px;
 $sponsor-margin: 40px;
+$article-padding-sm: 25px;
+$article-padding-md: 50px;
+$article-padding-lg: 125px;
+
 
 @font-face {
   font-family: "SchoolBook";
@@ -98,6 +102,10 @@ body {
 .preview-block {
   min-height: 800px;
 
+  @media screen and (max-width: 1280px) {
+    min-height: 1200px;
+  }
+
   @media screen and (max-width: 768px) {
     min-height: 1500px;
   }
@@ -116,6 +124,10 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .preview-text {
@@ -131,7 +143,7 @@ body {
   }
 
   @media screen and (max-width: 480px) {
-    padding: 0 25px;
+    padding: 0;
   }
 
   font-style: italic;
@@ -153,6 +165,7 @@ body {
 
   @media screen and (max-width: 480px) {
     min-height: 900px;
+    padding: 0 10px;
   }
 }
 
@@ -202,15 +215,15 @@ body {
 .article {
 
   @media screen and (min-width: 769px) {
-    padding: 100px 125px 0 125px;
+    padding: 100px $article-padding-lg 0 $article-padding-lg;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 100px 50px 0 50px;
+    padding: 100px $article-padding-md 0 $article-padding-md;
   }
 
   @media screen and (max-width: 480px) {
-    padding: 100px 25px 0 25px;
+    padding: 100px $article-padding-sm 0 $article-padding-sm;
   }
 
   display: flex;
@@ -515,10 +528,14 @@ p:first-child {
 }
 
 footer {
-  padding: 100px 150px;
+  padding: 100px $article-padding-lg;
 
   @media screen and (max-width: 768px) {
-    padding: 100px 50px;
+    padding: 100px $article-padding-md;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 100px $article-padding-sm;
   }
 
   margin: 0 auto;
@@ -533,6 +550,11 @@ footer {
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media screen and (max-width: 1280px) {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .sponsor {
@@ -540,6 +562,13 @@ footer {
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
+
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .primary-sponsor {
@@ -565,10 +594,19 @@ footer {
   flex-flow: row wrap;
   align-items: center;
   justify-content: start;
+
+  @media screen and (max-width: 1280px) {
+    justify-content: center;
+  }
 }
 
 .sponsor-link {
-  margin: $sponsor-margin/2;
+  @media screen and (max-width: 480px) {
+    margin-top: 25px;
+  }
+  @media screen and (min-width: 480px) {
+    margin: 0 $sponsor-margin/2;
+  }
 }
 
 .sponsor-link:first-child {
