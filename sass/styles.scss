@@ -955,8 +955,17 @@ footer {
   margin-top: 0;
 }
 
-#foton {
-  @media screen and (max-width: 480px) {
-    height: 75px;
+
+.workgroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  p {
+    margin-left: 25px;
+  }
+
+  p:last-child {
+    margin-left: 0;
   }
 }
