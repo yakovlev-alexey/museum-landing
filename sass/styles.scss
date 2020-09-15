@@ -778,7 +778,6 @@ footer {
   }
 
   margin: 0 auto;
-  min-height: 400px;
   max-width: $max-content-width;
 
   color: white;
@@ -818,13 +817,6 @@ footer {
   }
 }
 
-.primary-sponsor {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-}
-
 .sponsor-row {
   min-height: 150px;
 
@@ -856,16 +848,6 @@ footer {
 
   .sponsor-link:last-child {
     margin-right: 0;
-  }
-}
-
-#psb {
-  margin: -15px 0 -10px 0;
-
-  @media screen and (max-width: 480px) {
-    img {
-      height: 150px;
-    }
   }
 }
 
