@@ -15,6 +15,7 @@ $navmenu-margin: 62px;
 $navmenu-margin-sm: 31px;
 $navitem-margin: 10px;
 $sponsor-margin: 68px;
+$sponsor-margin-sm: 34px;
 $article-padding-sm: 25px;
 $article-padding-md: 50px;
 $article-padding-lg: 125px;
@@ -839,7 +840,7 @@ footer {
 
 .sponsor-link {
   @media screen and (max-width: 480px) {
-    margin-top: 25px;
+    margin: 10px $sponsor-margin-sm/2;
   }
 
   @media screen and (min-width: 480px) {
@@ -847,12 +848,15 @@ footer {
   }
 }
 
-.sponsor-link:first-child {
-  margin-left: 0;
-}
+@media screen and (min-width: 480px) {
 
-.sponsor-link:last-child {
-  margin-right: 0;
+  .sponsor-link:first-child {
+    margin-left: 0;
+  }
+
+  .sponsor-link:last-child {
+    margin-right: 0;
+  }
 }
 
 #psb {
@@ -868,8 +872,9 @@ footer {
 #supporters {
   @media screen and (max-width: 480px) {
     img {
-      height: 100px;
+      height: 80px;
     }
+
     margin-bottom: 25px;
   }
 }
@@ -877,7 +882,7 @@ footer {
 #informational {
   @media screen and (max-width: 480px) {
     img {
-      height: 50px;
+      height: 30px;
     }
   }
 }
