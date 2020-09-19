@@ -224,6 +224,12 @@ body {
     font-size: 12px;
     line-height: 20px;
   }
+  
+  @media screen and (max-width: 320px) {
+    padding: 0 10px;
+    font-size: 10px;
+    line-height: 15px;
+  }
 
   font-style: italic;
   font-weight: normal;
