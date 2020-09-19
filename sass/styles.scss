@@ -39,7 +39,7 @@ body {
 .cover {
   width: 100%;
   height: 100vh;
-  min-height: 400px;
+  min-height: 800px;
 
   background-image: url("../img/monogram.svg"), url("../img/leather_bg.png");
   background-position: center, top;
@@ -161,7 +161,7 @@ body {
 }
 
 .preview-block {
-  min-height: 800px;
+  min-height: 1000px;
 
   @media screen and (max-width: 1280px) {
     min-height: 1200px;
