@@ -49,10 +49,10 @@ body {
   background-position: center, top;
   background-size: auto, cover;
   background-repeat: no-repeat, repeat-y;
-  background-attachment: scroll, fixed;
+  background-attachment: scroll, scroll;
 
   @media screen and (max-width: 480px) {
-    background-image: url("../img/monogram-sm.png"), url("../img/leather_bg.png");
+    background-image: url("../img/monogram-sm.png"), url("../img/leather_bg-sm.png");
     background-size: auto, cover;
   }
 }
