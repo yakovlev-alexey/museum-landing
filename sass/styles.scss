@@ -52,7 +52,7 @@ body {
   background-attachment: scroll, fixed;
 
   @media screen and (max-width: 480px) {
-    background-image: url("../img/monogram-sm.png"), url("../img/leather_bg-sm.png");
+    background-image: url("../img/monogram-sm.png"), url("../img/leather_bg.png");
     background-size: auto, cover;
   }
 }
